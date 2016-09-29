@@ -1,0 +1,109 @@
+.top
+{
+    
+    width:100%;
+    height:90px;
+    background-color:#95cddd;
+}
+.logo
+{
+    width:800px;
+    float:left;
+}
+.course
+{
+	width: 150px;
+	float: left;
+	text-align: center;
+
+}
+.topblank
+{
+    width:100px;
+    float:left;
+}
+
+.login
+{
+    width:200px;
+    float:right;
+    
+}
+.logout
+{
+    width:200px;
+    float:right;
+    
+}
+.login img
+{
+	width: 150px;
+	height: 80px;
+	padding-top: 15px;
+	padding-bottom: 0px;
+	padding-left: 20px;
+}
+.logout img
+{
+	width: 150px;
+	height: 80px;
+	padding-top: 15px;
+	padding-bottom: 0px;
+	padding-left: 20px;
+}
+.bottom
+{
+    position:absolute;
+    width:100%;
+    height:800px;
+    background-image:url("../images/Western Background.jpg");
+    background-repeat:no-repeat;
+    background-size:100% 100%;
+}
+.btn-group
+{
+    width:100%;
+    height:50px;
+    
+}
+.showcomment
+{
+	width: 100%;
+	text-align: center;
+	height: 150px;
+	line-height: 80px;
+	padding-top: 0px;
+	padding-right: 80px;
+}
+.blank
+{
+    width:450px;
+    float:left;
+}
+.comment
+{
+	width: 400px;
+	float: left;
+
+}
+.comment textarea
+{
+	width: 400px;
+    height: 400px;
+    max-width: 600px;
+    max-height: 400px;
+}
+.createpost
+{
+	float:left;
+}
+.deletepost
+{
+	float:right;
+}
+.check
+{
+    
+    width:200px;
+    float:right;
+}

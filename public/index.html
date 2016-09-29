@@ -1,0 +1,94 @@
+<html ng-app="ECE9065_Lab1">
+<head>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.js"></script>
+    <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-1.1.1.js"></script>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.16/angular-route.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.1/angular-animate.js"></script>
+    <script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="JS/applicationModule.js"></script>
+    <script type="text/javascript" src="JS/Controllers.js"></script>
+    <script type="text/javascript" src="JS/loginbutton.js"></script>
+    <script type="text/javascript" src="JS/postcomment.js"></script>
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+	
+    
+</head>
+<body  >
+
+<script type="text/javascript">
+
+		var url = '';
+		var w = '';
+		$(document).ready(function() { 
+
+			$.get('/api/login', function(data) {
+				url = data;
+			});
+
+			var interval = window.setInterval((function() {
+			 	if (w.closed) {
+			 		window.clearInterval(interval);
+			 		window.location = '/#/Posting';
+			 	}
+			 }),1000);
+		});
+	</script>
+	<script type="text/javascript">
+
+		var facebookurl = '';
+		var facebookw = '';
+		$(document).ready(function() { 
+
+			$.get('/api/facebooklogin', function(data) {
+				facebookurl = data;
+			});
+
+			var interval = window.setInterval((function() {
+			 	if (facebookw.closed) {
+			 		window.clearInterval(interval);
+			 		window.location = '/#/Posting';
+			 	}
+			 }),1000);
+		});
+	</script>
+    <script type="text/javascript">
+
+		var linkedinurl = '';
+		var linkedinw = '';
+		$(document).ready(function() { 
+
+			$.get('/api/linkinlogin', function(data) {
+				linkedinurl = data;
+			});
+
+			var interval = window.setInterval((function() {
+			 	if (linkedinw.closed) {
+			 		window.clearInterval(interval);
+			 		window.location = '/#/Posting';
+			 	}
+			 }),1000);
+		});
+	</script>
+	<script type="text/javascript">
+
+		var twitterurl = '';
+		var twitterw = '';
+		$(document).ready(function() { 
+
+			$.get('/api/twitterlogin', function(data) {
+				twitterurl = data;
+			});
+
+			var interval = window.setInterval((function() {
+			 	if (twitterw.closed) {
+			 		window.clearInterval(interval);
+			 		window.location = '/#/Posting';
+			 	}
+			 }),1000);
+		});
+	</script> 
+  <!-- ng-view -->
+   <div ng-view></div>
+</body>
+</html>

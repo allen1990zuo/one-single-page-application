@@ -1,0 +1,90 @@
+<div class="main">
+      <div class="top">
+          <div class="logo">
+              <p>
+                  <img src="images/western Eng Logo.png"/>
+              </p>
+          </div>
+          <div class="course">
+             <h2>
+                 ECE065B
+             </h2>
+          </div>
+          <div class="topblank">
+             <p>
+                 
+             </p>
+     
+          </div>
+          <div class="logout" >
+            <a href=#Login><img src="images/logout.png" /></a>
+          </div>
+      </div>
+        <!-- dropdown menu-->
+      <div class="bottom" ng-controller="controlcomment">
+          <div class="btn-group" uib-dropdown is-open="status.isopen">
+          <button id="single-button" type="button" class="btn btn-primary" uib-dropdown-toggle ng-disabled="disabled">
+          Select a Page <span class="caret"></span>
+          </button>
+          <ul uib-dropdown-menu role="menu" aria-labelledby="single-button">
+          <li><a href="#Posting">Posting</a></li>
+          <li><a href="#SpecificPostComments">SpecificPostComments</a></li>
+          <li><a href="#Login">Logout</a></li>
+          </ul>
+          </div> 
+          <!-- textarea for comment-->
+          <div >
+          <div class="showcomment">
+             <h2>TrackingPosts</h2> 
+              {{record.email}}
+              
+              
+          </div>
+          <div class="blank">
+              <input type="button" ng-click=showpost() value="post(database)"/>
+              <div ng-repeat="post in userposts">{{post.postcontent}}
+              <input type="button" ng-click=showinpost(post) value="show"/>
+              </div>
+          </div>
+          <div class="comment">
+          <textarea name="text"  ng-model="post.postcontent" ></textarea><br/>
+          <div class="createpost">
+          <input type="button"  value="updatepost(for local)" ng-click="updatepost()">
+          </div>
+          
+          </div>
+          </div>
+           <!-- checkbox for social media-->
+          <div class="check">
+          <p><button type='button' ng-click="facebookposts()">Facebook Posts</button>
+           <div ng-repeat="facebookpost in facebookposts">{{facebookpost.message}}
+           <input type="button" ng-click='showfacebookpost(facebookpost)' value="show"/>
+           <input type="button" ng-click="deletefacebookpost(facebookpost)" value="delete">
+           </div>
+           <p>facebookmessage:{{media.message}}</p>
+          </p>
+          <p><button type='button' ng-click="twitterposts()">Twitter Posts</button>
+           <div ng-repeat="twitterpost in twitterposts">{{twitterpost.text}}
+           <input type="button" ng-click='showtwitterpost(twitterpost)' value="show"/>
+           <input type="button" ng-click="deletetwitterpost(twitterpost)" value="delete">
+           </div>
+           <p>twittermessage:{{media.text}}</p>
+          </p>
+          <p><button type='button' ng-click="linkedinposts()">Linkedin Posts</button>
+           <div ng-repeat="linkedinpost in linkedinposts">{{linkedinpost.message}}
+           <input type="button" ng-click='showlinkedinpost(linkedinpost)' value="show"/>
+           <input type="button" ng-click="deletelinkedinpost(linkedinpost)" value="delete">
+           </div>
+           <p>linkedinmessage:{{media.linkined}}</p>
+          </p>
+         
+          
+         
+          </div>
+
+      </div>
+      
+     
+  </div>
+       
+

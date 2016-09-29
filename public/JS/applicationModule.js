@@ -1,0 +1,1 @@
+var ECE9065_Lab1=angular.module('ECE9065_Lab1', ['ngRoute','ngAnimate','ui.bootstrap']);
