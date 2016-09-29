@@ -3,6 +3,7 @@ third party application for facebook, twitter, linkined
 
 
 Installation
+apply for google,Facebook,Twitter, Linkined API key for your workplace
 npm install
 
 
