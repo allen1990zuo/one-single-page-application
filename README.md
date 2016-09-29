@@ -7,5 +7,5 @@ npm install
 
 
 use
-start mongodb    /mongod
+start mongodb    mongod
 start server     node.js
